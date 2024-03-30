@@ -17,20 +17,18 @@
         <div class ="input_pass">
             <p>What is the name of the course?</p>
             <p style="font-size: small;">(lowercase, no space)</p>
-        <label for="password">Answer:</label><br><br>
-            <input type="text" id="password"
-        name="password""><br><br>
+            <P>Answer:</p>
+            <input type="text" id="password"      name="password""><br><br>
             <button onclick="passcheck()">Submit</button>
         </div>
-      
+   
     <script>
         function passcheck(){
             let text = document.getElementById("password").value;
-            document.getElementById("returnpass").innerHTML=text;
             if (text == "code102") {
                 location.replace("https://phamthuhuong91.github.io/Gardening/")
             } else {
-                document.getElementById("greetings").innerHTML="Your answer is "+text+". Not the correct answer. Please try again";
+                document.getElementById("greetings").innerHTML="Your answer is "+text+". This is not the correct answer. Please try again";
             }
         }
     </script>
