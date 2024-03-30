@@ -18,9 +18,19 @@
             <p>What is the name of the course?</p>
             <p style="font-size: small;">(lowercase, no space)</p>
             <P>Answer:</p>
-            <input type="text" id="password"      name="password""><br><br>
-            <button onclick="passcheck()">Submit</button>
+            <input type="text" id="password" name="password""><br><br>
+            <button id = "button" onclick="passcheck()">Submit</button>
         </div>
+
+    <script>
+        var input = document.getElementById("password");
+        input.addEventListener("keypress",function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("button").click();
+            }
+        });
+    </script>
    
     <script>
         function passcheck(){
